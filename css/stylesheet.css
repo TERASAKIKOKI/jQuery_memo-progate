@@ -203,13 +203,9 @@ header {
   color: #b3aeb5;
 }
 
-/* ここに.text-activeのCSSを追加してください */
-.text-active{
+.text-active {
   display: block;
 }
-
-
-
 
 /*faq wrapper*/
 .faq-wrapper {
@@ -224,6 +220,34 @@ header {
   margin: 0 auto;
   padding: 0;
   list-style: none;
+}
+
+/*アコーディオン追加 */
+.faq-list-item {
+  margin:10px;
+  border-bottom:1px solid #ccc;
+  position:relative;
+  cursor:pointer;
+  text-align: left;
+}
+
+.faq-list-item h3 {
+  font-size: 14px;
+}
+
+.faq-list-item span {
+  position:absolute;
+  top:0;
+  right:5px;
+  color:#ccc;
+  font-size:13px;
+}
+
+.answer {
+  font-size: 12px;
+  display: none;
+  padding: 5px 0px;
+  margin-bottom: 15px;
 }
 
 .message-wrapper {

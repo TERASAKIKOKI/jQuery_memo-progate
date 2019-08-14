@@ -15,14 +15,35 @@ $(function() {
   
   $('.lesson-hover').hover(
     function() {
-      // 子要素の「.text-contents」の要素を取得し、text-activeクラスをつけてください
-      $(this).find('.text-contents').addClass('text-active');
-      
+      $(this).find('.text-contents').addClass('text-active'); 
     },
     function() {
-      // 子要素の「.text-contents」の要素を取得し、text-activeクラスを外してください
       $(this).find('.text-contents').removeClass('text-active');
-      
     }
   );
+
+  // FAQのアコーディオン
+  $('.faq-list-item').click(function() {
+    var $answer = $(this).find('.answer');
+    if($answer.hasClass('open')) { 
+      $answer.removeClass('open');
+      // slideUpメソッドを用いて、$answerを隠してください
+      $answer.slideUp();
+
+      // 子要素のspanタグの中身をtextメソッドを用いて書き換えてください
+      $(this).find('span').text('+');
+      
+      
+    } else {
+      $answer.addClass('open'); 
+      // slideDownメソッドを用いて、$answerを表示してください
+      $answer.slideDown();
+      $(this).find('span').text('-')
+      
+      // 子要素のspanタグの中身をtextメソッドを用いて書き換えてください
+      
+      
+    }
+  });
 });
+
